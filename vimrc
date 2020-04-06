@@ -1,10 +1,19 @@
 set nocompatible
 
-" Support Pathogen (plugin installer)
-execute pathogen#infect()
-
 syntax on
+
+" Support Vundle (plugin installer)
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Gruvbox color scheme
+Plugin 'morhetz/gruvbox'
+
+call vundle#end()
+
 filetype plugin indent on
+
 
 set number
 set ruler
@@ -12,7 +21,6 @@ set ruler
 set expandtab
 set tabstop=2
 
-set cursorline
 set cursorcolumn
 
 " Search
